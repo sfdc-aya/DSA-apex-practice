@@ -674,4 +674,14 @@ public String process(String s){
 }
 
 
-19. 
+19. Find Common Characters
+Use case: Given list of strings: strs, implement a method that will return all the common characters in the list. The character should be repeated in the list according the minimum frequency that it occurs in the list. The input will only consist of lower case letters in the English alphabet.
+
+Example 1
+input: strs = ['cook', 'lock', 'cool,]
+output: ['c', 'o'];
+
+input: strs = ['bella', 'label', 'roller']
+output: ['e', 'l', 'l'];
+
+
