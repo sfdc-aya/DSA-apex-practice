@@ -563,6 +563,22 @@ Use case: You are given a list of unsorted integers and a target value. If the l
           Example 2
           Input: nums = [6,6,3,22, 1, 11, 56], target = 4 Output: [2,4] nums[2] + nums[4] = 4
 
+public static List<Integer> twoSum(List<Integer> nums, Integer target) {
+    Map<Integer, Integer> numToIndex = new Map<Integer, Integer>();
+    List<Integer> result = new List<Integer>();
+    
+    for (Integer i = 0; i < nums.size(); i++) {
+        Integer complement = target - nums[i];
+        if (numToIndex.containsKey(complement)) {
+            result.add(numToIndex.get(complement));
+            result.add(i);
+            return result;
+        }
+        numToIndex.put(nums[i], i);
+    }
+    
+    return result; // No solution found
+}
 
 16. Maximum Sub-array
 Use case: Given a list of Integers that can contain positive and negative values and an Integer target, calculate the maximum subarray of the length of the target.
