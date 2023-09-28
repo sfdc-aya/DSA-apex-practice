@@ -717,5 +717,19 @@ public List<String> commonChars(List<String> strs){
 
 
 20. Longest Substring With Max K Distinct Characters
-Use case: 
+Use case: Given a string str and an Integer k, return the size of the largest substring of str consisting of k distinct characters
+
+          Example 1
+          input: str = 'araaaci' k = 2
+          output: 4; largest substring with 2 distinct characters = 'araa';
+          
+          Example 2
+          input: str = 'string', k = 10
+          output: 6, there are fewer than 10 distinct characters
+          
+          Example 3
+          input: str = 'araaci', k = 1
+          output: 2, longest substring with 1 distinct character is aa
+
+
 
