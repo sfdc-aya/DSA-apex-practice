@@ -459,3 +459,21 @@ Use case: Given a List of Integers (List<Integer>), write a function that segreg
           Input: [12, 34, 45, 9, 8, 90, 3]
           Output: [8, 12, 34, 90, 3, 9, 45]
 
+public static void segregateEvenOdd(List<Integer> numbers){
+    Integer low = 0;
+    Integer high = numbers.size() - 1;
+
+    while(low < high){
+        Boolean isLowEven = Math.mod(numbers[low], 2) == 0;
+        Boolean isHighOdd = Math.mod(numbers[high], 2) != 0;
+
+        if(!isLowEven && !isHighOdd){
+            Integer temp = numbers[low];
+            numbers[low] = numbers[high];
+            numbers[high] = temp; 
+        }
+
+        if(isLowEven) low++;
+        if(isHighOdd) high--;
+    }
+}
