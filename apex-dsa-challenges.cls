@@ -225,3 +225,37 @@ Use case: Given a list of opportunities sorted by the Amount field and an Intege
           output: -1; The list does not contain a matching value
           Important constraint: A solution that uses a loop to check ALL opportunities will time out. Look for a solution faster than the linear solution.
 
+public static Integer search(List<Opportunity> opportunities, Integer target){
+    if(opportunities?.size() == 0 || target ==0)
+
+    return -1;
+
+      Integer left = 0;
+
+    Integer right = opportunities.size() - 1;
+
+    while (left <= right) {
+
+        Integer mid = left + (right - left) / 2;
+
+        if ((Integer)opportunities.get(mid).Amount == target) {
+
+            return mid; // Found a matching opportunity
+
+        } else if ((Integer)opportunities.get(mid).Amount < target) {
+
+            left = mid + 1; // Target is in the right half
+
+        } else {
+
+            right = mid - 1; // Target is in the left half
+
+        }
+
+    }
+
+    return -1; // No matching value found
+}
+
+
+
