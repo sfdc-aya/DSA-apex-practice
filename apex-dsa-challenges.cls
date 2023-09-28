@@ -413,4 +413,14 @@ public Integer maxProfit(List<Integer> prices){
 
 
 11.  Square a sorted list
-Use case: 
+Use case: Given a list of integers sorted in ascending order return a list of integers that contains the square of each value in the input list sorted in ascending order.
+
+          Example 1
+          Input: nums = [2, 4, 6, 8]
+          Output: 1; [4, 16, 36, 64];
+          
+          Example 2
+          Input: nums = [-10, 2, 4, 6, 8]
+          Output: [4, 16, 36, 64, 100]
+
+
