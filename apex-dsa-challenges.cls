@@ -397,4 +397,16 @@ Use case: You are given a list of integers that represent the daily closing pric
           Output: 0
           Explanation: In this case, no transactions are done and the max profit = 0.
 
-
+public Integer maxProfit(List<Integer> prices){
+    //code here
+        Integer minPrice = 10000;
+        Integer maxProfit = 0;
+        for (Integer price : prices) {
+            if (price < minPrice) {
+                minPrice = price;
+            } else {
+                maxProfit = Math.max(maxProfit, price - minPrice);
+            }
+        }
+        return maxProfit;
+}
