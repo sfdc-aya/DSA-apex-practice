@@ -610,4 +610,18 @@ Use case: Given a list of integers that are sorted in ascending order, return th
           Input: [4, 8, 10, 22], target = 30
           Output: [1, 3] because the sum of 8 and 22 is 30
 
+public List<Integer> twoSum(List<Integer> nums, Integer target){
+    //code here
+    Integer left = 0;
+    Integer right = nums.size() -1; 
+    while(left < right){
+        Integer sum = nums[left] + nums[right];
+        if(sum == target){
+            return new List<Integer>{left, right};
+        }else if (sum < target){
+            left++;
+        }else right --;
+    }
+    return new List<Integer>();
+}
 
