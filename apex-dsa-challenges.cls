@@ -731,5 +731,25 @@ Use case: Given a string str and an Integer k, return the size of the largest su
           input: str = 'araaci', k = 1
           output: 2, longest substring with 1 distinct character is aa
 
+public static Integer longestDistinctSubstring(String str, Integer k){ 
+    //solution here
+//solution using Set and List
+    Set<String> strSet = new Set<String>();
+    List<String> strList = new List<String>();
+    Integer maxSize = 0;
 
+    for(String s : str.split('')){
+        if(strSet.size() == k && !strSet.contains(s)){
+            maxSize = strList.size() > maxSize ? strList.size() : maxSize;
+            strSet.clear();
+            strList.clear();
+        }
+        else{
+            strSet.add(s);
+            strList.add(s);
+        }
+    }
+    maxSize = strList.size() > maxSize ? strList.size() : maxSize;
+    return maxSize;
+}
 
