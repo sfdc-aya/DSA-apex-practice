@@ -410,3 +410,7 @@ public Integer maxProfit(List<Integer> prices){
         }
         return maxProfit;
 }
+
+
+11.  Square a sorted list
+Use case: 
