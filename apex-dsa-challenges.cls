@@ -754,7 +754,7 @@ public static Integer longestDistinctSubstring(String str, Integer k){
 }
 
 
-21. 
+21. Same String
 Use case: Given two strings containing backspaces identified with '#', return true if the strings are the same after applying the backspaces.
 
           Example 1
