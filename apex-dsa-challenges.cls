@@ -753,3 +753,18 @@ public static Integer longestDistinctSubstring(String str, Integer k){
     return maxSize;
 }
 
+
+21. 
+Use case: Given two strings containing backspaces identified with '#', return true if the strings are the same after applying the backspaces.
+
+          Example 1
+          String str1 = 'xy#z';
+          String str2 = 'xyz#';
+          Boolean result = sameString(str1, str2);
+          result == false because the strings evaluate to xz and xy after the back spaces are applied.
+          
+          Example 2
+          String str1 = 'ab#c';
+          String str2 = 'ac';
+          Boolean result = sameString(str1, str2);
+          result == true because the strings evaluate to ac and ac after the backspaces are applied.
