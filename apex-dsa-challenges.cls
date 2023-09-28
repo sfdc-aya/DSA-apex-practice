@@ -378,3 +378,23 @@ List<String> listStringinInitialOrder = str.split(' ');
     }
     return String.join(listStringReversedOrder, ' ');
 }
+
+
+10. Buy Low and Sell High
+Use case: You are given a list of integers that represent the daily closing price of a stock. Write a program to maximize your profit by choosing the best day to buy and the best to sell. price.get(i) represents the stock price on a given day i.
+          
+          Return the maximum profit. If no profit is possible return 0. You should be able to solve this in O(n) time.
+          You may assume the maximum price for this problem is 10000
+
+          Example 1
+          Input: prices = [10, 2, 5, 3, 8, 4]
+          Output: 6
+          
+          If we buy on day 2 the price is 2. If we sell on day 5 the price is 8. 8 -2 = 6; You can not buy on day 2 and sell on day 1.
+          
+          Example 2
+          Input: prices = [7,6,4,3,1]
+          Output: 0
+          Explanation: In this case, no transactions are done and the max profit = 0.
+
+
