@@ -520,3 +520,33 @@ else
 return false;
 }
 
+
+14. Defragging
+Use case: You are given a List of Integers which represents memory with -1 representing empty space and all other Integers representing. Your task is to move all the empty spaces to the end of the list while maintaining the order of the rest of the elements.
+          Note: that you must do this in-place without making a copy of the array.
+          
+          Examples:
+          Input: [-1,1,-1,3,12]
+          Output: [1,3,12,-1,-1]
+          Input: [-1,1,0,15,2]
+          Output: [1,0,15,2,-1]
+
+public void defragging(Integer[] memory){
+    // code here
+    Integer i = 0;
+    Integer j = 0;
+    Integer n = memory.size();
+
+    while (j < n) {
+        if (memory[j]!= -1) {
+            memory.set(i, memory[j]);
+            i++;
+        }
+        j++;
+    }
+
+    while (i < n) {
+        memory.set(i, -1);
+        i++;
+    }
+}
