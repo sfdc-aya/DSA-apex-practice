@@ -676,12 +676,42 @@ public String process(String s){
 
 19. Find Common Characters
 Use case: Given list of strings: strs, implement a method that will return all the common characters in the list. The character should be repeated in the list according the minimum frequency that it occurs in the list. The input will only consist of lower case letters in the English alphabet.
+          
+          Example 1
+          input: strs = ['cook', 'lock', 'cool,]
+          output: ['c', 'o'];
+          
+          input: strs = ['bella', 'label', 'roller']
+          output: ['e', 'l', 'l'];
 
-Example 1
-input: strs = ['cook', 'lock', 'cool,]
-output: ['c', 'o'];
+public List<String> commonChars(List<String> strs){
+    //solution here
+    Integer[] listCount = new Integer[26];
+    for (Integer i = 0; i < 26; i++)
+        listCount[i] = 2147483647;
+    for (String s : strs){
+        Integer[] wordCount = new Integer[26];
+        for (Integer i = 0; i < 26; i++)
+            wordCount[i] = 0;
+        for (Integer i = 0; i < s.length(); i++){
+            wordCount[s.charAt(i) - 97] = wordCount[s.charAt(i) - 97] + 1;
+        }
 
-input: strs = ['bella', 'label', 'roller']
-output: ['e', 'l', 'l'];
+        System.debug(wordCount);
+        for (Integer i = 0; i < 26; i++)
+            listCount[i] = Math.min(listCount[i], wordCount[i]);
+    }
 
+    System.debug(listCount);
+    List<String> res = new List<String>();
+    for (Integer i = 0; i < 26; i++){
+        Integer count = listCount[i];
+        while (count > 0){
+            count--;
+            String myChar = String.fromCharArray(new List<integer>{ i + 97 });
+            res.add(myChar);
+        }
+    }
+    return res;
+}
 
