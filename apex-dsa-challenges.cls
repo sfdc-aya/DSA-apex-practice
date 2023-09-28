@@ -163,3 +163,33 @@ public class Node{
 }
 
 
+3. Valid Palindrome 
+Use case: 
+
+public Boolean isPalindrome(String str){
+//code here
+    str = str.toLowerCase();
+    String alpha = 'abcdefghijklmnopqrstuvwxyz';
+    String num = '0123456789';
+    String res = '';
+
+    for(Integer i = 0; i < str.length(); i++){
+        if(alpha.contains(str.substring(i,i+1)) || num.contains(str.substring(i,i+1))){
+            res += str.substring(i,i+1);
+        }
+    }
+
+    Integer l = 0;
+    Integer r = res.length() - 1;
+    while(l <= r){
+        if(res.substring(l,l+1) != res.substring(r,r+1)){
+            return false;
+        }else{
+            l++;
+            r--;
+        }
+    }
+    return true;
+}
+
+
