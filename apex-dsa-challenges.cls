@@ -258,4 +258,36 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
 }
 
 
+6. Valid Anagram
+Use case: Two words are considered valid anagrams if they are composed of the exact same letters with the exact same frequency. Implement the method isAnagram that takes as input two strings s1 and s2, and returns true if the two words are anagrams. Assume that the two strings contain only lowercase alphabets a-z.
+          Examples:
+          isAnagram('apex', 'peax') == true
+          isAnagram('sandbox', 'sandpit') == false
+
+public boolean isAnagram(String s1, String s2) {
+    //Code here
+    if(s1==null || s2==null) return false;
+    else if(s1.length() != s2.length()) return false;
+    map<String,Integer> map1 = new map<String,Integer>();
+    
+    for(Integer i=0;i<s1.length();i++){
+        if(map1.containskey(s1.substring(i,i+1))){
+            Integer val = map1.get(s1.substring(i,i+1));
+            map1.put(s1.substring(i,i+1),val+1);
+        }
+        else map1.put(s1.substring(i,i+1),1);
+
+        if(map1.containskey(s2.substring(i,i+1))){
+            Integer val = map1.get(s2.substring(i,i+1));
+            map1.put(s2.substring(i,i+1),val-1);
+        }
+        else map1.put(s2.substring(i,i+1),-1);
+    }
+
+    for(Integer i:map1.values()){
+        if(i != 0) return false;
+    }
+    return true;
+}
+
 
