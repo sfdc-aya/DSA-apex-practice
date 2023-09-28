@@ -354,4 +354,15 @@ public Boolean isSubSequence(String s1, String s2){
 
 
 9. Reverse Words In String
-Use case: 
+Use case: Given a string that contains a sequence of words separated by spaces, write a method that reverses the order of the characters in each word.
+          You must maintain white space and the order of the words.
+          
+          Example 1:
+          Input: lets learn apex strings
+          Output: stel nrael xepa sgnirts
+          
+          Example 2:
+          Input: DSA is fun
+          Output: ASD si nuf
+
+
