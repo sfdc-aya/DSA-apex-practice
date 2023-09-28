@@ -206,4 +206,12 @@ Use case: A classic computer science problem is to merge to sorted lists. In thi
           input: list1 = [1, 3, 5, 7], list2=[2, 4, 6, 8, 9, 10, 100];
           output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100];
 
+public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2){
+    list1.addAll(list2);
+    list1.sort();
+    System.debug(list1);
+    return list1;
+}
 
+
+5.
