@@ -328,5 +328,17 @@ public void plusOne(List<Integer> numbers) {
 }
 
 
-8. 
+8. Valid Subsequence
+Use case: Given a method that takes two strings s1 and s2 return true if s1 is a subsequence of s2.
+          A valid subsequence means that string s1 can be formed from string s2 by deleting some characters, but maintaining the order.
+          Example 1
+          Input: s1 = 'abc', s2 = 'aghlrbrrc'
+          Output: true
+          
+          Input: s1 = 'abc', s2 = 'caaab'
+          Output: false
+          
+          Constraints
+          s1 and s2 will only consist of lowercase English letters.
+          s2 will always be longer than s1
 
