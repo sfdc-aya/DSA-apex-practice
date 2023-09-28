@@ -214,4 +214,5 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
 }
 
 
-5.
+5. Binary Search Opportunites
+Use case:
