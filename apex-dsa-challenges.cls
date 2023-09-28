@@ -51,147 +51,115 @@ public class Stack {
 
 
 2. Implement A Singly Linked List
-Use case: 
+Use case: Implement a Linked List
+          A linked list a fundamental data structure in computer science. Linked data structures are used in heaps, graphs and trees.
+          In this problem you need to implement a basic singly linked list. You are given a class and basic method signatures as well as a Node class. You will need to implement the following...
+          A constructor to set the initial state of the class
+          The method addToFront() it accepts an integer and puts it at the front of the list. This should be a constant time operation.
+          the method removeFromFront(). This removes the element at the front of the list and returns its value. It should be a constant time operation. If the list is empty return null
+          The method size(). This should return the current size of the list
+          The method addToTail(). This adds an element to the end of the list. See if you can find a way to do it in constant time as a challenge
+          The method removeFromTail(). Remove the last element in the list and return its value. If the list is empty return null
+          Example 1
+          LinkedList linkedList = new LinkedList();
+          linkedList.addToFront(1);
+          linkedList.addToFront(2);
+          linkedList.size(); // 2
+          linkedList.removeFromFront() // 2
+          linkedList.size()// 1
+          
+          Example 2
+          LinkedList LinkedList = new LinkedList();
+          linkedList.addToTail(5);
+          linkedList.addToTail(6);
+          linkedList.addToFront(1);
+          linkedList.addToFront(2);
+          linkedList.size(); // 4
+          linkedList.removeFromTail() // 6
+          linkedList.removeFromTail() // 5
+          linkedList.removeFromTail() // 1
+          linkedList.removeFromFront() // 2
+          linkedList.removeFromFront() // null
+          linkedList.size() == 0;
 
 public class LinkedList{
     Node head;
-
     Node tail;
-
     Integer size;
-
     public LinkedList(){
-
         this.head = null;
-
         this.tail = null;
-
         this.size = 0;
-
     }
 
     public void addToFront(Integer value){
-
         Node node = new Node();
-
         node.data = value;
-
         if (this.head == null) {
-
             this.head = node;
-
             this.tail = this.head;
-
         } else {
-
             //do this in order
-
             node.next = this.head;
-
             head = node;
-
         }
-
         this.size++;
-
     }
 
     public Integer removeFromFront(){
-
         if(size == 0){
-
             return null;
-
         }
-
         Integer value = head.data;
-
         head = head.next;
-
         size--;
-
         return value;
-
     }
 
     public void addToTail(Integer value){
-
         Node newNode = new Node();
-
         newNode.data = value;
-
         if (head == null) {
-
             head = newNode;
-
             tail = head;
-
         }else {
-
             this.tail.next = newNode;
-
             this.tail = newNode;
-
         }
-
         size++;
-
     }
 
     public Integer removeFromTail(){
-
         if(size() == 0 ){
-
             return null;
-
         } else if(size() == 1){
-
             Integer data = head.data;
-
             head = null;
-
             size --;
-
             return data;
-
         } 
 
         Node current = head;
-
         Node newTail = null;
-
         while (current.next != null) {
-
             newTail = current;
-
             current = current.next;
-
         }
-
         Integer data = current.data;
-
         tail = newTail;
-
         tail.next = null; 
-
         size --;
-
         return data;
-
     }
 
     public Integer size(){
-
         return this.size;
-
     }
-
 }
 
 public class Node{
-
     Integer data;
-
     Node next;
-
 }
+
+
