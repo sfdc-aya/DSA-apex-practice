@@ -365,4 +365,16 @@ Use case: Given a string that contains a sequence of words separated by spaces, 
           Input: DSA is fun
           Output: ASD si nuf
 
+public static String reverseWords(String str){
 
+List<String> listStringinInitialOrder = str.split(' ');
+    List<String> listStringReversedOrder  = new list<string>();
+    for(String eachString : listStringinInitialOrder){
+        String sBuilder = '';
+        for (integer i = eachString.length()-1 ; i>=0 ; i--){
+            sBuilder =  sBuilder + eachString.substring(i,i+1);
+        }
+        listStringReversedOrder.add(sBuilder);
+    }
+    return String.join(listStringReversedOrder, ' ');
+}
