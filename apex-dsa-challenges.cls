@@ -315,4 +315,18 @@ Use case: A large integer number is given as a List of Integers from 0 to 9. You
           Incrementing by one gives 129 + 1 = 130.
           Thus, the result should be [1,3,0].
 
+public void plusOne(List<Integer> numbers) {
+    for (Integer i=numbers.size() - 1; i >= 0; i--) {
+        numbers[i]++;
+
+        if (numbers[i] <= 9) { 
+            return;
+        }
+        else numbers[i] = 0;
+    }
+    numbers.add(0, 1);
+}
+
+
+8. 
 
