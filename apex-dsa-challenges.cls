@@ -574,4 +574,24 @@ Use case: Given a list of Integers that can contain positive and negative values
           Constraints
           Your solution should be able to handle data sets up to 5000 members
 
+public static Integer maxSubArraySum(List<Integer> nums, Integer target){
+//code here
+    Integer maxval= 0;
+    for(Integer i=0;i<target;i++)
+        maxval+=nums[i];
+    Integer currval;
+    Integer i=0;
+    
+    while(i<nums.size()-target){
+        currval = nums[i];
+        for(Integer j = i+1; j<i+target; j++){
+            currval+=nums[j];
+        }
+        if(currval>maxval) maxval=currval;
+        i++;
+    }
+
+    if(target==1 && nums[nums.size()-1]>maxval) return nums[nums.size()-1];
+    return maxval;
+}
 
