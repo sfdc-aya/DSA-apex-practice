@@ -423,4 +423,25 @@ Use case: Given a list of integers sorted in ascending order return a list of in
           Input: nums = [-10, 2, 4, 6, 8]
           Output: [4, 16, 36, 64, 100]
 
+public static List<Integer> squareList(List<Integer> nums){
+     //We have to account for negative numbers
+    Integer left = 0;
+    Integer right = nums.size() -1;
+    Integer highestIndex = nums.size() -1;
+    List<Integer> solution = new List<Integer>(nums.size());
+    //basic two pointer
+    
+    while(left <= right ){
+        Integer leftSquare = nums[left] * nums[left];
+        Integer rightSquare = nums[right] * nums[right];
+       if(leftSquare > rightSquare){ 
+           solution[highestIndex--] = leftSquare;
+           left ++;
+       }else {
+           solution[highestIndex--] = rightSquare;
+           right--;
+       }
+    }   
+     return solution;
+}
 
