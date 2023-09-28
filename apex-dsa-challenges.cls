@@ -641,3 +641,37 @@ Use case: Can you count and say what characters the string '11121' has?
           countAndSay(7) == '13112221'
           Write a function that takes N (sequence number) as a parameter and outputs the Nth sequence. 1<= N <= 20
 
+public string countAndSay(integer N) {
+    // code here
+     String res = '';
+    for (Integer i = 0; i < N; i++){
+        res = process(res);
+    }
+    return res;
+}
+
+public String process(String s){
+    if (String.isEmpty(s))
+        return '1';
+    String res = '';
+    Integer i = 0;
+    Integer n = s.length();
+    List<String> sp = s.split('');
+    while (i < n){
+        Integer j = i + 1;
+        Integer count = 1;
+// COUNT DUPLICATE
+        while (j < n && sp.get(j - 1) == sp.get(j)){
+            count++;
+            j++;
+        }
+        if (i < n){
+            res += count + '' + sp.get(i);
+        }
+        i = j;
+    }
+    return res;
+}
+
+
+19. 
