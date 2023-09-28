@@ -565,5 +565,13 @@ Use case: You are given a list of unsorted integers and a target value. If the l
 
 
 16. Maximum Sub-array
-Use case: 
+Use case: Given a list of Integers that can contain positive and negative values and an Integer target, calculate the maximum subarray of the length of the target.
+
+          Example
+          Input: nums: [2, 3, -5, 1, 8] and target = 2
+          Output: 9
+          The largest continuous subarray is 1 and 8.
+          Constraints
+          Your solution should be able to handle data sets up to 5000 members
+
 
