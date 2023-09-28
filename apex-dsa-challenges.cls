@@ -715,3 +715,7 @@ public List<String> commonChars(List<String> strs){
     return res;
 }
 
+
+20. Longest Substring With Max K Distinct Characters
+Use case: 
+
