@@ -477,3 +477,14 @@ public static void segregateEvenOdd(List<Integer> numbers){
         if(isHighOdd) high--;
     }
 }
+
+
+13. Balanced Parentheses
+Use case: Given a String s containing only the six characters '(', '{', '[', ']', '}', and ')', return true only if every opening bracket has a matching closing bracket of the same type, and all brackets are closed in the correct order.
+          Examples:
+          
+          input: '()[(())]', Output: true
+          Input: '([{}]))', Output: false
+          Input: '([]}', Output: false
+          
+
