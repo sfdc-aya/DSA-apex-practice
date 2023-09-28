@@ -342,3 +342,12 @@ Use case: Given a method that takes two strings s1 and s2 return true if s1 is a
           s1 and s2 will only consist of lowercase English letters.
           s2 will always be longer than s1
 
+public Boolean isSubSequence(String s1, String s2){
+    Integer lastIndex = -1;
+
+    for(String s : s1.split('')){
+        if(s2.indexOf(s) < lastIndex) return false;
+        lastIndex = s2.indexOf(s);
+    }
+    return true;
+}
