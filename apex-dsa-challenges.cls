@@ -486,5 +486,37 @@ Use case: Given a String s containing only the six characters '(', '{', '[', ']'
           input: '()[(())]', Output: true
           Input: '([{}]))', Output: false
           Input: '([]}', Output: false
-          
+
+public Boolean isValid(String s){
+    //code here 
+List<String> stack = new List<String>();
+Set<String> validInput = new Set<String>{'(','{','[',')','}',']'};
+
+Map<String,String> validParanthesisMap = new Map<String,String>{
+    '}'=>'{',
+    ')'=>'(',
+    ']'=>'['
+};
+
+for(String str : s.split('')){
+    if(!validInput.contains(str))
+    return false;
+    if(stack.isEmpty() == true)
+        stack.add(str);
+    else{
+        if(validParanthesisMap.containsKey(str)){
+        String peep = validParanthesisMap.get(str);
+        if(peep == stack.get(stack.size()-1))
+        stack.remove(stack.size()-1);
+    }
+        else
+         stack.add(str);
+    }
+}
+
+if(stack.isEmpty())
+return true;
+else
+return false;
+}
 
