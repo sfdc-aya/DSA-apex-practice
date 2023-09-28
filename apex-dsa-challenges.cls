@@ -564,3 +564,6 @@ Use case: You are given a list of unsorted integers and a target value. If the l
           Input: nums = [6,6,3,22, 1, 11, 56], target = 4 Output: [2,4] nums[2] + nums[4] = 4
 
 
+16. Maximum Sub-array
+Use case: 
+
